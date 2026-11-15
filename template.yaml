@@ -8,14 +8,21 @@ log-level: info
 ipv6: false
 dns:
   enabled: true
-  nameserver:
-    - 119.29.29.29
+  default-nameserver:
     - 223.5.5.5
-  fallback:
-    - 8.8.8.8
-    - 8.8.4.4
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
+    - 119.29.29.29
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - +.local
+    - localhost.ptlogin2.qq.com
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -209,13 +216,12 @@ proxy-groups:
       - REJECT
       - DIRECT
   - name: 🌐 DNS 出口
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: select
+    proxies:
+      - DIRECT
+      - 🔰 节点选择
+      - ♻️ 自动选择
     hidden: true
-    include-all: true
-    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
 rule-providers:
   rp-01-yunhai:
     type: http
