@@ -209,6 +209,14 @@ proxy-groups:
   proxies:
     - REJECT
     - DIRECT
+- name: 🌐 DNS 出口
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  hidden: true
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
 
 rule-providers:
   rp-01-yunhai:
