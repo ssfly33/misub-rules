@@ -1,0 +1,4 @@
+# 🐟 云海 | 2 条规则 | 由 ssfly-new.yaml 自动生成
+payload:
+  - "DOMAIN-SUFFIX,emby.oceancloud.asia"
+  - "DOMAIN-SUFFIX,nsfw.oceancloud.asia"
