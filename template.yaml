@@ -16,208 +16,206 @@ dns:
     - 8.8.4.4
     - tls://1.0.0.1:853
     - tls://dns.google:853
-
 proxy-groups:
-- name: 🔰 节点选择
-  type: select
-  proxies:
-    - ♻️ 自动选择
-    - 🎯 全球直连
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: ♻️ 自动选择
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies:
-    - 🎯 全球直连
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎵 TikTok
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 Prime
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 YouTube
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 HBO
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎵 spotify
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎮 游戏平台
-  type: select
-  proxies:
-    - 🎯 全球直连
-    - 🔰 节点选择
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: Ⓜ️ 微软服务
-  type: select
-  proxies:
-    - 🎯 全球直连
-    - 🔰 节点选择
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 巴哈姆特
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 NETFLIX
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 DisneyPlus
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 日韩媒体
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 港台媒体
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 国外媒体
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎬 哔哩哔哩
-  type: select
-  proxies:
-    - 🎯 全球直连
-    - 🔰 节点选择
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🌏 国外网站
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🍎 苹果服务
-  type: select
-  proxies:
-    - 🎯 全球直连
-    - 🔰 节点选择
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🌏 国内网站
-  type: select
-  proxies:
-    - 🎯 全球直连
-    - 🔰 节点选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🐟 漏网之鱼
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 📲 电报信息
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🎯 全球直连
-  type: select
-  proxies:
-    - DIRECT
-- name: 🐟 ps
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🐟 云海
-  type: select
-  proxies:
-    - 🔰 节点选择
-    - 🎯 全球直连
-    - ♻️ 自动选择
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-- name: 🛑 全球拦截
-  type: select
-  proxies:
-    - REJECT
-    - DIRECT
-- name: 🌐 DNS 出口
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  hidden: true
-  include-all: true
-  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
-
+  - name: 🔰 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🎯 全球直连
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎵 TikTok
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 Prime
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 YouTube
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 HBO
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎵 spotify
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 巴哈姆特
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 NETFLIX
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 DisneyPlus
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 日韩媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 港台媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 国外媒体
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎬 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🌏 国外网站
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🌏 国内网站
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🔰 节点选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🐟 ps
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🐟 云海
+    type: select
+    proxies:
+      - 🔰 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🌐 DNS 出口
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    hidden: true
+    include-all: true
+    exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
 rule-providers:
   rp-01-yunhai:
     type: http
@@ -363,7 +361,6 @@ rule-providers:
     url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/24-telegram.yaml
     path: ./ruleset/24-telegram.yaml
     interval: 86400
-
 rules:
   - RULE-SET,rp-01-yunhai,🐟 云海
   - RULE-SET,rp-02-ps,🐟 ps
