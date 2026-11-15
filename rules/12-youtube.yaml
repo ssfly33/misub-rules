@@ -1,0 +1,10 @@
+# 🎬 YouTube | 8 条规则 | 由 ssfly-new.yaml 自动生成
+payload:
+  - "DOMAIN-KEYWORD,youtube"
+  - "DOMAIN,youtubei.googleapis.com"
+  - "DOMAIN,yt3.ggpht.com"
+  - "DOMAIN-SUFFIX,googlevideo.com"
+  - "DOMAIN-SUFFIX,gvt2.com"
+  - "DOMAIN-SUFFIX,youtu.be"
+  - "DOMAIN-SUFFIX,youtube.com"
+  - "DOMAIN-SUFFIX,ytimg.com"
