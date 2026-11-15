@@ -219,10 +219,9 @@ proxy-groups:
   - name: 🌐 DNS 出口
     type: select
     proxies:
-      - DIRECT
-      - 🔰 节点选择
       - ♻️ 自动选择
-    hidden: true
+      - 🔰 节点选择
+      - DIRECT
 rule-providers:
   rp-01-yunhai:
     type: http
@@ -369,6 +368,13 @@ rule-providers:
     path: ./ruleset/24-telegram.yaml
     interval: 86400
 rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,223.5.5.5/32,DIRECT,no-resolve
+  - IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
+  - DST-PORT,53,🌐 DNS 出口
   - RULE-SET,rp-01-yunhai,🐟 云海
   - RULE-SET,rp-02-ps,🐟 ps
   - RULE-SET,rp-03-direct,🎯 全球直连
@@ -393,3 +399,4 @@ rules:
   - RULE-SET,rp-22-apple,🍎 苹果服务
   - RULE-SET,rp-23-domestic,🌏 国内网站
   - RULE-SET,rp-24-telegram,📲 电报信息
+  - MATCH,🐟 漏网之鱼
