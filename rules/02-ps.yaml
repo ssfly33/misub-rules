@@ -1,0 +1,7 @@
+# 🐟 ps | 5 条规则 | 由 ssfly-new.yaml 自动生成
+payload:
+  - "DOMAIN-SUFFIX,playstation.com"
+  - "DOMAIN-SUFFIX,playstation.net"
+  - "DOMAIN-SUFFIX,web-commerce-anywhere.playstation.com"
+  - "DOMAIN-SUFFIX,playstationnetwork.com"
+  - "DOMAIN-SUFFIX,sonyentertainmentnetwork.com"
