@@ -197,6 +197,7 @@ proxy-groups:
   - name: 🐟 ps
     type: select
     proxies:
+      - REJECT
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
