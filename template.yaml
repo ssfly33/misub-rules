@@ -1,0 +1,384 @@
+# MiSub 订阅模板：节点（proxies）由 MiSub 自动注入；策略组与规则集托管在本仓库
+# 规则按原配置的 25 个连续策略段切分，匹配顺序与原文件完全一致
+mixed-port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+
+proxy-groups:
+- name: 🔰 节点选择
+  type: select
+  proxies:
+    - ♻️ 自动选择
+    - 🎯 全球直连
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: ♻️ 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+    - 🎯 全球直连
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎵 TikTok
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 Prime
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 YouTube
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 HBO
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎵 spotify
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎮 游戏平台
+  type: select
+  proxies:
+    - 🎯 全球直连
+    - 🔰 节点选择
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+    - 🎯 全球直连
+    - 🔰 节点选择
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 巴哈姆特
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 NETFLIX
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 DisneyPlus
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 日韩媒体
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 港台媒体
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 国外媒体
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎬 哔哩哔哩
+  type: select
+  proxies:
+    - 🎯 全球直连
+    - 🔰 节点选择
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🌏 国外网站
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+    - 🎯 全球直连
+    - 🔰 节点选择
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🌏 国内网站
+  type: select
+  proxies:
+    - 🎯 全球直连
+    - 🔰 节点选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 📲 电报信息
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🎯 全球直连
+  type: select
+  proxies:
+    - DIRECT
+- name: 🐟 ps
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🐟 云海
+  type: select
+  proxies:
+    - 🔰 节点选择
+    - 🎯 全球直连
+    - ♻️ 自动选择
+  include-all: true
+  exclude-filter: (?i)(剩余流量|套餐到期|距离下次重置|官网|过期)
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+    - REJECT
+    - DIRECT
+
+rule-providers:
+  rp-01-yunhai:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/01-yunhai.yaml
+    path: ./ruleset/01-yunhai.yaml
+    interval: 86400
+  rp-02-ps:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/02-ps.yaml
+    path: ./ruleset/02-ps.yaml
+    interval: 86400
+  rp-03-direct:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/03-direct.yaml
+    path: ./ruleset/03-direct.yaml
+    interval: 86400
+  rp-04-microsoft:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/04-microsoft.yaml
+    path: ./ruleset/04-microsoft.yaml
+    interval: 86400
+  rp-05-direct:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/05-direct.yaml
+    path: ./ruleset/05-direct.yaml
+    interval: 86400
+  rp-06-hbo:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/06-hbo.yaml
+    path: ./ruleset/06-hbo.yaml
+    interval: 86400
+  rp-07-spotify:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/07-spotify.yaml
+    path: ./ruleset/07-spotify.yaml
+    interval: 86400
+  rp-08-direct:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/08-direct.yaml
+    path: ./ruleset/08-direct.yaml
+    interval: 86400
+  rp-09-direct:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/09-direct.yaml
+    path: ./ruleset/09-direct.yaml
+    interval: 86400
+  rp-10-games:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/10-games.yaml
+    path: ./ruleset/10-games.yaml
+    interval: 86400
+  rp-11-bahamut:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/11-bahamut.yaml
+    path: ./ruleset/11-bahamut.yaml
+    interval: 86400
+  rp-12-youtube:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/12-youtube.yaml
+    path: ./ruleset/12-youtube.yaml
+    interval: 86400
+  rp-13-netflix:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/13-netflix.yaml
+    path: ./ruleset/13-netflix.yaml
+    interval: 86400
+  rp-14-tiktok:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/14-tiktok.yaml
+    path: ./ruleset/14-tiktok.yaml
+    interval: 86400
+  rp-15-prime:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/15-prime.yaml
+    path: ./ruleset/15-prime.yaml
+    interval: 86400
+  rp-16-disney:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/16-disney.yaml
+    path: ./ruleset/16-disney.yaml
+    interval: 86400
+  rp-17-jpkr:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/17-jpkr.yaml
+    path: ./ruleset/17-jpkr.yaml
+    interval: 86400
+  rp-18-hktw:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/18-hktw.yaml
+    path: ./ruleset/18-hktw.yaml
+    interval: 86400
+  rp-19-media:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/19-media.yaml
+    path: ./ruleset/19-media.yaml
+    interval: 86400
+  rp-20-bilibili:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/20-bilibili.yaml
+    path: ./ruleset/20-bilibili.yaml
+    interval: 86400
+  rp-21-foreign:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/21-foreign.yaml
+    path: ./ruleset/21-foreign.yaml
+    interval: 86400
+  rp-22-apple:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/22-apple.yaml
+    path: ./ruleset/22-apple.yaml
+    interval: 86400
+  rp-23-domestic:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/23-domestic.yaml
+    path: ./ruleset/23-domestic.yaml
+    interval: 86400
+  rp-24-telegram:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/24-telegram.yaml
+    path: ./ruleset/24-telegram.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,rp-01-yunhai,🐟 云海
+  - RULE-SET,rp-02-ps,🐟 ps
+  - RULE-SET,rp-03-direct,🎯 全球直连
+  - RULE-SET,rp-04-microsoft,Ⓜ️ 微软服务
+  - RULE-SET,rp-05-direct,DIRECT
+  - RULE-SET,rp-06-hbo,🎬 HBO
+  - RULE-SET,rp-07-spotify,🎵 spotify
+  - RULE-SET,rp-08-direct,DIRECT
+  - RULE-SET,rp-09-direct,🎯 全球直连
+  - RULE-SET,rp-10-games,🎮 游戏平台
+  - RULE-SET,rp-11-bahamut,🎬 巴哈姆特
+  - RULE-SET,rp-12-youtube,🎬 YouTube
+  - RULE-SET,rp-13-netflix,🎬 NETFLIX
+  - RULE-SET,rp-14-tiktok,🎵 TikTok
+  - RULE-SET,rp-15-prime,🎬 Prime
+  - RULE-SET,rp-16-disney,🎬 DisneyPlus
+  - RULE-SET,rp-17-jpkr,🎬 日韩媒体
+  - RULE-SET,rp-18-hktw,🎬 港台媒体
+  - RULE-SET,rp-19-media,🎬 国外媒体
+  - RULE-SET,rp-20-bilibili,🎬 哔哩哔哩
+  - RULE-SET,rp-21-foreign,🌏 国外网站
+  - RULE-SET,rp-22-apple,🍎 苹果服务
+  - RULE-SET,rp-23-domestic,🌏 国内网站
+  - RULE-SET,rp-24-telegram,📲 电报信息
+  - MATCH,🐟 漏网之鱼
