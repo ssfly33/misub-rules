@@ -222,145 +222,145 @@ rule-providers:
   rp-01-yunhai:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/01-yunhai.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/01-yunhai.yaml
     path: ./ruleset/01-yunhai.yaml
     interval: 86400
   rp-02-ps:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/02-ps.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/02-ps.yaml
     path: ./ruleset/02-ps.yaml
     interval: 86400
   rp-03-direct:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/03-direct.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/03-direct.yaml
     path: ./ruleset/03-direct.yaml
     interval: 86400
   rp-04-microsoft:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/04-microsoft.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/04-microsoft.yaml
     path: ./ruleset/04-microsoft.yaml
     interval: 86400
   rp-05-direct:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/05-direct.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/05-direct.yaml
     path: ./ruleset/05-direct.yaml
     interval: 86400
   rp-06-hbo:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/06-hbo.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/06-hbo.yaml
     path: ./ruleset/06-hbo.yaml
     interval: 86400
   rp-07-spotify:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/07-spotify.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/07-spotify.yaml
     path: ./ruleset/07-spotify.yaml
     interval: 86400
   rp-08-direct:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/08-direct.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/08-direct.yaml
     path: ./ruleset/08-direct.yaml
     interval: 86400
   rp-09-direct:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/09-direct.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/09-direct.yaml
     path: ./ruleset/09-direct.yaml
     interval: 86400
   rp-10-games:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/10-games.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/10-games.yaml
     path: ./ruleset/10-games.yaml
     interval: 86400
   rp-11-bahamut:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/11-bahamut.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/11-bahamut.yaml
     path: ./ruleset/11-bahamut.yaml
     interval: 86400
   rp-12-youtube:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/12-youtube.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/12-youtube.yaml
     path: ./ruleset/12-youtube.yaml
     interval: 86400
   rp-13-netflix:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/13-netflix.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/13-netflix.yaml
     path: ./ruleset/13-netflix.yaml
     interval: 86400
   rp-14-tiktok:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/14-tiktok.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/14-tiktok.yaml
     path: ./ruleset/14-tiktok.yaml
     interval: 86400
   rp-15-prime:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/15-prime.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/15-prime.yaml
     path: ./ruleset/15-prime.yaml
     interval: 86400
   rp-16-disney:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/16-disney.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/16-disney.yaml
     path: ./ruleset/16-disney.yaml
     interval: 86400
   rp-17-jpkr:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/17-jpkr.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/17-jpkr.yaml
     path: ./ruleset/17-jpkr.yaml
     interval: 86400
   rp-18-hktw:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/18-hktw.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/18-hktw.yaml
     path: ./ruleset/18-hktw.yaml
     interval: 86400
   rp-19-media:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/19-media.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/19-media.yaml
     path: ./ruleset/19-media.yaml
     interval: 86400
   rp-20-bilibili:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/20-bilibili.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/20-bilibili.yaml
     path: ./ruleset/20-bilibili.yaml
     interval: 86400
   rp-21-foreign:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/21-foreign.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/21-foreign.yaml
     path: ./ruleset/21-foreign.yaml
     interval: 86400
   rp-22-apple:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/22-apple.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/22-apple.yaml
     path: ./ruleset/22-apple.yaml
     interval: 86400
   rp-23-domestic:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/23-domestic.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/23-domestic.yaml
     path: ./ruleset/23-domestic.yaml
     interval: 86400
   rp-24-telegram:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/24-telegram.yaml
+    url: https://gcore.jsdelivr.net/gh/ssfly33/misub-rules@main/rules/24-telegram.yaml
     path: ./ruleset/24-telegram.yaml
     interval: 86400
 
