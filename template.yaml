@@ -393,4 +393,3 @@ rules:
   - RULE-SET,rp-22-apple,🍎 苹果服务
   - RULE-SET,rp-23-domestic,🌏 国内网站
   - RULE-SET,rp-24-telegram,📲 电报信息
-  - MATCH,🐟 漏网之鱼
